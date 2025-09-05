@@ -1,3 +1,13 @@
+// Function to get TEND URL based on environment
+function getTendUrl() {
+    // Check if we're in local development
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        return 'http://localhost:5173';
+    }
+    // Production URL
+    return 'https://tend.fly.dev/';
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const emberEmail = document.getElementById("emberEmail");
     const emberMessage = document.getElementById("emberMessage");
@@ -8,24 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const tendMessage = document.getElementById("tendMessage");
 
 
-    // 📥Waitlist add for Tend
-    tendLfgButton.addEventListener("click", async () => {
-      const email = tendEmail.value.trim();
-      if (!email) {
-        message.textContent = "Please enter a valid email";
-        return;
-      }
-
-      const res = await fetch("/requestAccess", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email })
-      });
-
-      tendMessage.textContent = res.ok
-        ? "You're on the Tend waitlist - we'll be in touch"
-        : "How embarrassing, that failed - please try again";
-    });
+    // TEND functionality removed since it's now live - button redirects to live app
 
     // 🔹 Step 1 for Ember: User enters email, clicks LFG, check profile existence
     emberLfgButton.addEventListener("click", async () => {
