@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <h1>Welcome to Heart(h)!</h1>
     <link rel="stylesheet" href="/styles/main.css" />
     <style>
-        #hero { min-height: 40px; margin-bottom: 16px; border-bottom: 1px solid white;}
+        #hero { min-height: 40px; margin-bottom: 16px; margin-top: 32px; border-bottom: 1px solid white;}
         .layout { display: grid; grid-template-columns: 1fr; gap: 16px; }
         @media (min-width: 1024px) {
             .layout { grid-template-columns: 1fr 1fr;
@@ -27,9 +26,15 @@
 
 <body>
 <section id="hero">
-    <p id="hearthexplainer" style="font-style: italic;">
-        Heart(h) software helps you connect with yourself and others, finding more joy and satisfaction with with less grind and overwhelm
-
+    <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 16px;">
+        <img src="/images/hearth-logo.png" alt="Heart(h) Logo" style="width: 80px; height: auto; flex-shrink: 0;">
+        <div>
+            <h1 style="margin: 0 0 8px 0; color: var(--heading);">Welcome to Heart(h)!</h1>
+            <p style="margin: 0; font-style: italic; color: var(--text);">
+                Heart(h) software helps you connect with yourself and others, finding more joy and satisfaction with less grind and overwhelm
+            </p>
+        </div>
+    </div>
 </section>
 <main class="layout">
 
