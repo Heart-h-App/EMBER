@@ -1,7 +1,7 @@
 const sqlite3 = require("sqlite3").verbose();
 const bcrypt = require("bcrypt");
 const dbUrl = process.env.DATABASE_URL;
-const dbPath = dbUrl ? new URL(dbUrl).pathname : './database/hearth.sqlite';
+const dbPath = dbUrl ? new URL(dbUrl).pathname : (process.env.NODE_ENV === 'production' ? '/data/hearth.sqlite' : './database/hearth.sqlite');
 const db = new sqlite3.Database(dbPath);
 const UNIVERSAL_ACCESS_CODE = "tryHeart(h)2025"
 
