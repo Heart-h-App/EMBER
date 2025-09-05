@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Heart(h)!</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+</head>
+
+</head>
+<body>
+
+<h1>Welcome to Heart(h)!</h1>
+
+<label for="email">Email:</label>
+<input type="email" id="email" placeholder="Enter your email" required>
+<br><br>
+
+<!-- Password field (hidden by default) -->
+<div id="passwordContainer" style="display: none;">
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="password" required>
+    <button type="button" id="togglePassword">
+        👁️
+    </button>
+    <br><br>
+    <button id="loginButton">Login</button>
+    <br><br>
+</div>
+
+<!-- LFG button to check profile -->
+<button id="lfgButton">LFG</button>
+
+<p id="message" style="color: red;"></p>
+
+<script src="scripts/index.js" defer></script>
+
+</body>
+</html>

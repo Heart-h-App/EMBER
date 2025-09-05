@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>Welcome to Heart(h)!</h1>
+    <link rel="stylesheet" href="/styles/main.css" />
+    <style>
+        #hero { min-height: 40px; margin-bottom: 16px; border-bottom: 1px solid white;}
+        .layout { display: grid; grid-template-columns: 1fr; gap: 16px; }
+        @media (min-width: 1024px) {
+            .layout { grid-template-columns: 1fr 1fr;
+            }
+            #left-panel {
+            border-right: 1px solid white;
+            padding-right: 16px;
+            }
+        #right-panel {
+            padding-left: 16px;
+            }
+        }
+        #right-panel { min-height: 200px; }
+        .sub-header { font-size: 0.8em; font-style: italic; color: white}
+    </style>
+</head>
+
+
+<body>
+<section id="hero">
+    <p id="hearthexplainer" style="font-style: italic;">
+        Heart(h) software helps you connect with yourself and others, finding more joy and satisfaction with with less grind and overwhelm
+
+</section>
+<main class="layout">
+
+    <div id="left-panel">
+
+        <h2>EMBER (live now!)
+            <br>
+            <span class="sub-header"> helps you create connection!</span>
+        </h2>
+        <h3>Sign-up / login</h3>
+
+        <input type="email" id="emberEmail" placeholder="Enter your email" required>
+        <br><br>
+
+
+        <!-- Password field (hidden by default) -->
+        <div id="passwordContainer" style="display: none;">
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="password" required>
+            <button type="button" id="togglePassword">
+                👁️
+            </button>
+            <br><br>
+            <button id="loginButton">Login</button>
+            <br><br>
+        </div>
+
+        <!-- LFG button to check for Ember profile -->
+        <button id="emberLfgButton">LFG</button>
+
+        <p id="emberMessage" style="color: red;"></p>
+
+        <p id="emberexplainer" style="font-style: italic;">
+            Ember is an app that helps you make connections by focusing on what you want to do. Like Tinder, but first swiping on activities, then finding out who wants to do that activity
+        </p>
+
+    </div>
+
+    <aside id="right-panel">
+        <h2>TEND (coming soon)
+            <br>
+            <span class="sub-header"> helps you nurture connection!</span>
+        </h2>
+        <h3>Waitlist sign-up</h3>
+        <input type="email" id="tendEmail" placeholder="Enter your email" required>
+        <br><br>
+
+        <button id="tendLfgButton">LFG</button>
+
+        <p id="tendMessage"></p>
+
+
+        <p id="emberexplainer" style="font-style: italic;">
+            Tend is an app that helps you nurture connections by mapping your important people, setting your relational north star, and helping you design experiments to learn and grow
+        </p>
+
+    </aside>
+</main>
+
+<script src="scripts/index.js" defer></script>
+
+</body>
+</html>
+

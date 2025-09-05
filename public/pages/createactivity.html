@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Activity</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body>
+<div id="navbar"></div>
+<form id="activityForm">
+    <h2>What activity do you want to share with someone(s)?</h2>
+    <label for="activitydescription">I want to...</label>
+    <textarea id="activitydescription" placeholder="Describe the activity here" required></textarea>
+    <br><br>
+
+    <label for="activitylocation">Where?</label>
+    <textarea id="activitylocation" placeholder="City, State; Specific gym, park, neighborhood, etc" required></textarea>
+    <br><br>
+
+    <label for="activitytiming">When?</label>
+    <textarea id="activitytiming" placeholder="e.g., every Tuesday afternoon; Fri MM/DD @1p; some weekend this fall" required></textarea>
+    <br><br>
+
+    <label for="activitybuddydescription">With whom?</label>
+    <textarea id="activitybuddydescription" placeholder="share some things you hope are true about the person(s) you do this with" required></textarea>
+    <br><br>
+
+    <button type="submit">Submit</button>
+    <div id="errorMessage" style="color: red;"></div>
+    <div id="successMessage" style="color: green;"></div>
+</form>
+
+<div id="savedActivityDisplay" style="margin-top: 20px; padding: 10px; border: 1px solid #ccc; display: none;">
+    <h3>Saved Activity:</h3>
+    <p id="savedActivityContent"></p>
+</div>
+
+<script src="../scripts/createactivity.js"></script>
+</body>
+<script defer src="../scripts/navbar.js"></script>
+</html>

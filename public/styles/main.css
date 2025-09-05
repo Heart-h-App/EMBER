@@ -1,0 +1,103 @@
+/* main.css */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Mulish:wght@400;600&display=swap');
+
+/* Default (dark) theme variables */
+:root {
+  --brand-primary: #AA4B41;  /* Reddish */
+  --brand-accent: #F2A0A1;   /* Coral */
+  --brand-deep: #223A5E;     /* Navy */
+  --brand-soft: #C3D6C6;     /* Near white */
+
+  --bg: #1e1e1e;
+  --text: #E0E0E0;
+  --button-bg: var(--brand-deep);
+  --button-hover: var(--brand-soft);
+  --input-bg: #2a2a2a;
+  --input-border: #555;
+  --link: var(--brand-accent);
+  --heading: var(--brand-primary);
+}
+
+/* Light mode overrides */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: var(--brand-soft);
+    --text: var(--brand-deep);
+    --button-bg: var(--brand-deep);
+    --button-hover: #2F4F3A;
+    --input-bg: white;
+    --input-border: #ccc;
+    --link: var(--brand-primary);
+    --heading: var(--brand-primary);
+  }
+}
+
+/* Base styles */
+body {
+  font-family: 'Mulish', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0 16px;
+  line-height: 1.5;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 800;
+  color: var(--heading);
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Buttons */
+button {
+  font-family: 'Mulish', sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--button-bg);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
+
+/* Inputs and Textareas */
+input, textarea, select {
+  font-family: 'Mulish', sans-serif;
+  font-size: 1em;
+  padding: 6px 10px;
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  margin-bottom: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--input-bg);
+  color: var(--text);
+}
+
+/* Links */
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Layout Helpers */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}

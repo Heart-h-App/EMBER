@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body>
+<div id="navbar"></div>
+
+<main>
+    <h1>Edit Profile</h1>
+    <form id="editProfileForm">
+        <label for="name">Name:</label>
+        <input id="name" type="text" placeholder="Name" required />
+        <br><br>
+
+        <label for="location">Location:</label>
+        <input id="location" type="text" placeholder="City, State" required />
+        <br><br>
+
+        <label for="aboutme">About me:</label>
+        <textarea id="aboutme" placeholder="What will your ideal connections find interesting about you?" required></textarea>
+        <br><br>
+
+        <label for="onlinepresence">Where to find me online:</label>
+        <input id="onlinepresence" type="text" placeholder="Website, LinkedIn, IG..." required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input id="email" type="email" placeholder="Email" required readonly
+               style="background-color: #f0f0f0; color: #666; cursor: not-allowed;">
+        <br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input id="phone" type="tel" placeholder="Phone Number" required>
+        <br><br>
+
+        <button type="submit">Save Changes</button>
+    </form>
+
+    <br><br>
+    <button type="button" id="deleteAccountButton"
+            style="background-color: transparent; color: #c00; border: 2px solid #c00; font-style: italic;">
+        Delete Account
+    </button>
+
+
+</main>
+
+<script defer src="../scripts/editprofile.js"></script>
+
+</body>
+<script defer src="../scripts/navbar.js"></script>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Profile</title>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const email = params.get("email");
+        if (!email) {
+            window.location.href = "../index.html";
+        }
+    </script>
+    <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body>
+<h1>Create your profile and first activity</h1>
+<p id="openingline" style="font-style: italic;">
+    Heart(h) invites you making more meaningful, satisfying connections by starting with what you want do - that way your connections center on shared values and interests.  Ready?  Let's go!
+
+</p>
+
+<form id="profileAndFirstActivityForm">
+
+    <h2>What activity do you want to share with someone(s)?</h2>
+
+    <p id="firstactivityexplainer" style="font-style: italic;">
+        This is your first activity!  Start with one thing you want to connect on for now, you can create additional activities later too. Activities are how you'll match with others and start connecting.  Be as specific and detailed as you can!
+    </p>
+
+    <label for="activitydescription">I want to...</label>
+    <textarea id="activitydescription" placeholder="learn new skill, book club, work out, etc " required></textarea>
+    <br><br>
+
+    <label for="activitylocation">Where?</label>
+    <textarea id="activitylocation" placeholder="Detroit, MI; Specific gym, park, etc" required></textarea>
+    <br><br>
+
+    <label for="activitytiming">When?</label>
+    <textarea id="activitytiming" placeholder="every Tues, Fri @1p, fall weekends, etc" required></textarea>
+    <br><br>
+
+    <label for="activitybuddydescription">With whom?</label>
+    <textarea id="activitybuddydescription" placeholder="share some things you hope are true about the person(s) you do this with" required></textarea>
+    <br><br>
+
+
+    <h2>What do you want potential activity matches to know about you?</h2>
+    <p id="profilerevealexplainer" style="font-style: italic;">
+        This will be the information people see about you when they express interest in your activities or you ask to match on their activities.
+    </p>
+    <label for="name">Name:</label>
+    <input id="name" type="text" placeholder="Name" required />
+    <br><br>
+
+    <label for="location">Location:</label>
+    <input id="location" type="text" placeholder="City, State" required />
+    <br><br>
+
+    <label for="aboutme">About me:</label>
+    <textarea id="aboutme" placeholder="What will your ideal connections find interesting about you?" required></textarea>
+    <br><br>
+
+    <label for="onlinepresence">Where to find me online:</label>
+    <input id="onlinepresence" type="text" placeholder="Website, LinkedIn, IG..." required>
+    <br><br>
+
+    <h2>How do you want activity matches to contact you?</h2>
+
+    <p id="contactinfoexplainer" style="font-style: italic;">
+        This will be shared after you both agree to match on an activity.
+    </p>
+    <label for="email">Email:</label>
+    <input id="email" type="email" placeholder="Email" required readonly>
+    <br><br>
+
+    <label for="phone">Phone Number:</label>
+    <input id="phone" type="tel" placeholder="Phone Number" required>
+    <br><br>
+
+    <h2>Set Your Password</h2>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="Enter password" required>
+    <button type="button" id="togglePassword1">👁️</button>
+    <br><br>
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" placeholder="Re-enter password" required>
+    <button type="button" id="togglePassword2">👁️</button>
+    <br><br>
+
+    <p id="passwordError" style="color: red; display: none;">Passwords do not match.</p>
+
+
+    <button type="submit" id="submitButton">Submit</button>
+    <p id="agreetoterms" style="font-style: italic; font-size: 0.9em; color: #555;">
+        By clicking "Submit" you agree to these terms.
+    </p>
+    <div id="errorMessage" style="color: red;"></div>
+    <div id="successMessage" style="color: green;"></div>
+</form>
+
+
+<div id="savedProfileDisplay" style="margin-top: 20px; padding: 10px; border: 1px solid #ccc; display: none;">
+    <h3>Saved Profile:</h3>
+    <p id="savedProfileContent"></p>
+</div>
+
+<div id="savedActivityDisplay" style="margin-top: 20px; padding: 10px; border: 1px solid #ccc; display: none;">
+    <h3>Saved Activity:</h3>
+    <p id="savedActivityContent"></p>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const emailInput = document.getElementById("email");
+        emailInput.value = email;
+    });
+</script>
+
+<script src="../scripts/createprofile.js"></script>
+
+</body>
+</html>
